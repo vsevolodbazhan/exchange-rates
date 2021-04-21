@@ -1,20 +1,14 @@
-from dataclasses import dataclass
 from typing import Iterator, Tuple
 
 import pendulum
 import requests
 from bs4 import BeautifulSoup, element
 
+from .entities.exchange_rate import ExchangeRate
+
 __all__ = ["ExchangeRate", "extract_exchange_rates"]
 
 BASE_URL = "http://cbr.ru/scripts/XML_daily.asp?date_req={date}"
-
-
-@dataclass
-class ExchangeRate:
-    date: str
-    currency_code: str
-    rate: float
 
 
 def _get_exchange_rates_markup(base_url: str, date: str) -> bytes:
