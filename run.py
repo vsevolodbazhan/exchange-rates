@@ -10,3 +10,5 @@ if __name__ == "__main__":
             end=pendulum.datetime(year=2020, month=8, day=1),
         )
     )
+    for rate in extract_exchange_rates:
+        print(rate)
