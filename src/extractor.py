@@ -16,4 +16,5 @@ class ExchangeRate:
 
 def extract_exchange_rates(period: pendulum.period) -> List[ExchangeRate]:
     for date in period:
+        date = date.strftime("%d.%m.%Y")
         print(date)
