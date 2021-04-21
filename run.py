@@ -3,7 +3,6 @@ import pendulum
 from src.extractor import extract_exchange_rates
 from src.writer import write_exchange_rates
 
-
 if __name__ == "__main__":
     exchange_rates = extract_exchange_rates(
         period=pendulum.period(

@@ -3,6 +3,8 @@ from typing import Iterable
 
 from .entities.exchange_rate import ExchangeRate
 
+__all__ = ["write_exchange_rates"]
+
 
 def write_exchange_rates(file_name: str, exchange_rates: Iterable[ExchangeRate]):
     with open(file_name, "w") as file:
