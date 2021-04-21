@@ -1,6 +1,6 @@
 # Exchange Rates (MyTona Test Task)
 
-Python project that extracts exchange rates from [CBR](http://cbr.ru/) XML markups.
+Python script that extracts exchange rates from [CBR](http://cbr.ru/) XML markups.
 
 
 ## Usage
