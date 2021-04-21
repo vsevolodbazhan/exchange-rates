@@ -27,7 +27,7 @@ def _parse_exchange_rate_tag(tag: element.Tag) -> Tuple[str, float]:
     return char_code, float(value)
 
 
-def extract_exchange_rates(period: pendulum.period) -> Iterator[ExchangeRate]:
+def extract_exchange_rates(period: pendulum.Period) -> Iterator[ExchangeRate]:
     for date in period:
         date = date.strftime("%d/%m/%Y")
         markup = _get_exchange_rates_markup(base_url=BASE_URL, date=date)
